@@ -1,10 +1,11 @@
 import * as React from "react";
 import { ChakraProvider, theme } from "@chakra-ui/react";
-import { Row, Banner } from "./components";
+import { Row, Banner, Nav } from "./components";
 import { requests } from "./request";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
+    <Nav />
     <Banner />
     <Row
       title="NETFLIX ORIGUINALS"
