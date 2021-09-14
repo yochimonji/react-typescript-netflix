@@ -16,7 +16,6 @@ export const Banner = () => {
   useEffect(() => {
     const fetchData = async () => {
       const request = await axios.get(requests.feachNetflixOriginals);
-      console.log(request.data.result);
 
       setMovie(
         request.data.results[
@@ -27,7 +26,6 @@ export const Banner = () => {
     };
     fetchData();
   }, []);
-  console.log(movie);
 
   const truncate = (str: string | undefined, n: number) => {
     if (str !== undefined) {
