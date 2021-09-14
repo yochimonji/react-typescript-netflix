@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Heading, HStack, Image } from "@chakra-ui/react";
-import axios from "./axios";
+import axios from "../axios";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -44,7 +44,7 @@ export const Row = ({ title, fetchUrl, isLargeRow }: Props) => {
             w="100%"
             m="2"
             transition="transform 450ms"
-            maxH={isLargeRow ? "20" : "50"}
+            maxH={isLargeRow ? "50" : "20"}
             _hover={{ transform: "scale(1.08)" }}
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
